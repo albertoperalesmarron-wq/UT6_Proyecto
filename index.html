@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula IES Trassierra</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="wizard-container">
+        <div class="progress-bar">
+            <div class="step active">1. Datos</div>
+            <div class="step">2. Ciclo</div>
+            <div class="step">3. Resumen</div>
+        </div>
+
+        <form id="wizardForm">
+            <section id="step1" class="step-content active">
+                <h2>Datos del Alumno</h2>
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" placeholder="Ej: Ana García">
+                    <span class="error-msg" id="error-nombre"></span>
+                </div>
+                <div class="form-group">
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" placeholder="00000000X">
+                    <span class="error-msg" id="error-dni"></span>
+                </div>
+                <div class="buttons">
+                    <button type="button" disabled>Atrás</button>
+                    <button type="button" id="btn-next-1">Siguiente ➡️</button>
+                </div>
+            </section>
+
+            <section id="step2" class="step-content hidden" aria-hidden="true">
+                <h2>Selección de Ciclo</h2>
+                <div class="form-group">
+                    <label for="ciclo">Elige tu ciclo:</label>
+                    <select id="ciclo">
+                        <option value="">-- Selecciona --</option>
+                        <option value="daw">DAW (Desarrollo Web)</option>
+                        <option value="dam">DAM (Multiplataforma)</option>
+                    </select>
+                </div>
+                <div class="buttons">
+                    <button type="button" id="btn-prev-2">⬅️ Atrás</button>
+                    <button type="button" id="btn-next-2">Siguiente ➡️</button>
+                </div>
+            </section>
+
+            <section id="step3" class="step-content hidden" aria-hidden="true">
+                <h2>Confirma tus datos</h2>
+                <div id="resumen-data">
+                    <p>Cargando datos...</p>
+                </div>
+                <div class="buttons">
+                    <button type="button" id="btn-prev-3">⬅️ Atrás</button>
+                    <button type="button" class="btn-success" id="btn-submit">✅ Confirmar Matrícula</button>
+                </div>
+            </section>
+        </form>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
